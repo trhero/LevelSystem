@@ -16,7 +16,7 @@ import { executeSync } from '../libs/utils';
     source.playerData.level = level;
     source.playerData.exp = exp;
     db.update(
-        'UPDATE characters SET level = ?, level=?, exp=? WHERE ssn = ?',
+        'UPDATE characters SET level = ?, exp=? WHERE ssn = ?',
         [ssn,level,exp],
         undefined,
         alt.resourceName

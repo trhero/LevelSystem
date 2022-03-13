@@ -11,19 +11,8 @@ import * as alt from 'alt-server';
         [ssn,exp]    
     );
     return result;
-};
-    const updateData = (source) => {
-    ssn = source.playerData;
-    source.playerData.level = level;
-    source.playerData.exp = exp;
-    db.update(
-        'UPDATE characters SET level = ?, exp=? WHERE ssn = ?',
-        [ssn,level,exp],
-        undefined,
-        alt.resourceName
-    );
-};
-
+    };
+   
     let exp = await getExp();
     let currentLevel;
     let OnLevelUp;
